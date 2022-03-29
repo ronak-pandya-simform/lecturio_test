@@ -45,4 +45,5 @@ COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
 #COPY Files
 COPY . .
+RUN chmod -R 777 /var/www/html/
 RUN composer install
